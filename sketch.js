@@ -9,38 +9,41 @@ let btn_01, btn_02, btn_03, btn_04;
 let btn3_01, btn3_02, btn3_03, btn3_04, btn3_05;
 
 function setup() {
-  createCanvas(402, 874);
+  //createCanvas(402, 874);
   textAlign(CENTER, CENTER);
   textFont('sans-serif');
+  
+let myCanvas = createCanvas(402, 874);
+  myCanvas.position(0, 0, 'relative');
   
 
   // 1페이지 버튼 생성 및 초기 세팅
 
-  btn01 = createButton('홍조'); btn01.position(63,204); btn01.size(129,39); btn01.mousePressed(toggleButtonPage1);
-  btn02 = createButton('여드름/트러블'); btn02.position(214,204); btn02.size(129,39); btn02.mousePressed(toggleButtonPage1);
-  btn03 = createButton('주름'); btn03.position(63,261); btn03.size(129,39); btn03.mousePressed(toggleButtonPage1);
-  btn04 = createButton('흔적'); btn04.position(214,261); btn04.size(108,39); btn04.mousePressed(toggleButtonPage1);
-  btn05 = createButton('탄력'); btn05.position(66,318); btn05.size(98,39); btn05.mousePressed(toggleButtonPage1);
-  btn06 = createButton('모공'); btn06.position(190,318); btn06.size(100,39); btn06.mousePressed(toggleButtonPage1);
-  btn07 = createButton('건조함/푸석함'); btn07.position(66,375); btn07.size(140,39); btn07.mousePressed(toggleButtonPage1);
-  btn08 = createButton('블랙헤드'); btn08.position(221,375); btn08.size(100,39); btn08.mousePressed(toggleButtonPage1);
-  btn09 = createButton('유분'); btn09.position(66,438); btn09.size(100,39); btn09.mousePressed(toggleButtonPage1);
-  btn10 = createButton('기타'); btn10.position(180,438); btn10.size(100,39); btn10.mousePressed(toggleButtonPage1);
+  btn01 = createButton('홍조'); btn01.position(63,204); btn01.size(129,39); btn01.mousePressed(toggleButtonPage1); btn01.parent(myCanvas);
+  btn02 = createButton('여드름/트러블'); btn02.position(214,204); btn02.size(129,39); btn02.mousePressed(toggleButtonPage1); btn02.parent(myCanvas);
+  btn03 = createButton('주름'); btn03.position(63,261); btn03.size(129,39); btn03.mousePressed(toggleButtonPage1); btn03.parent(myCanvas);
+  btn04 = createButton('흔적'); btn04.position(214,261); btn04.size(108,39); btn04.mousePressed(toggleButtonPage1); btn04.parent(myCanvas);
+  btn05 = createButton('탄력'); btn05.position(66,318); btn05.size(98,39); btn05.mousePressed(toggleButtonPage1); btn05.parent(myCanvas);
+  btn06 = createButton('모공'); btn06.position(190,318); btn06.size(100,39); btn06.mousePressed(toggleButtonPage1); btn06.parent(myCanvas);
+  btn07 = createButton('건조함/푸석함'); btn07.position(66,375); btn07.size(140,39); btn07.mousePressed(toggleButtonPage1); btn07.parent(myCanvas);
+  btn08 = createButton('블랙헤드'); btn08.position(221,375); btn08.size(100,39); btn08.mousePressed(toggleButtonPage1); btn08.parent(myCanvas);
+  btn09 = createButton('유분'); btn09.position(66,438); btn09.size(100,39); btn09.mousePressed(toggleButtonPage1); btn09.parent(myCanvas);
+  btn10 = createButton('기타'); btn10.position(180,438); btn10.size(100,39); btn10.mousePressed(toggleButtonPage1); btn10.parent(myCanvas);
   
   
   // 2페이지 버튼 생성 및 초기 세팅
 
-  btn_01 = createButton('지성'); btn_01.position(57,293); btn_01.size(129,39); btn_01.mousePressed(toggleButtonPage2);
-  btn_02 = createButton('민감성/트러블'); btn_02.position(208,293); btn_02.size(129,39); btn_02.mousePressed(toggleButtonPage2);
-  btn_03 = createButton('건성'); btn_03.position(57,357); btn_03.size(129,39); btn_03.mousePressed(toggleButtonPage2);
-  btn_04 = createButton('복합성'); btn_04.position(208,357); btn_04.size(129,39); btn_04.mousePressed(toggleButtonPage2);
+  btn_01 = createButton('지성'); btn_01.position(57,293); btn_01.size(129,39); btn_01.mousePressed(toggleButtonPage2); btn_01.parent(myCanvas);
+  btn_02 = createButton('민감성/트러블'); btn_02.position(208,293); btn_02.size(129,39); btn_02.mousePressed(toggleButtonPage2); btn_02.parent(myCanvas);
+  btn_03 = createButton('건성'); btn_03.position(57,357); btn_03.size(129,39); btn_03.mousePressed(toggleButtonPage2); btn_03.parent(myCanvas);
+  btn_04 = createButton('복합성'); btn_04.position(208,357); btn_04.size(129,39); btn_04.mousePressed(toggleButtonPage2); btn_04.parent(myCanvas);
   
   // 3페이지 버튼 생성 및 초기 세팅
-  btn3_01 = createButton('10대'); btn3_01.position(61,284); btn3_01.size(129,39); btn3_01.mousePressed(toggleButtonPage3);
-  btn3_02 = createButton('20대'); btn3_02.position(212,284); btn3_02.size(129,39); btn3_02.mousePressed(toggleButtonPage3);
-  btn3_03 = createButton('30대'); btn3_03.position(61,341); btn3_03.size(129,39); btn3_03.mousePressed(toggleButtonPage3);
-  btn3_04 = createButton('40대'); btn3_04.position(212,341); btn3_04.size(129,39); btn3_04.mousePressed(toggleButtonPage3);
-  btn3_05 = createButton('50대 이상'); btn3_05.position(61,398); btn3_05.size(129,39); btn3_05.mousePressed(toggleButtonPage3);
+  btn3_01 = createButton('10대'); btn3_01.position(61,284); btn3_01.size(129,39); btn3_01.mousePressed(toggleButtonPage3); btn3_01.parent(myCanvas);
+  btn3_02 = createButton('20대'); btn3_02.position(212,284); btn3_02.size(129,39); btn3_02.mousePressed(toggleButtonPage3); btn3_02.parent(myCanvas);
+  btn3_03 = createButton('30대'); btn3_03.position(61,341); btn3_03.size(129,39); btn3_03.mousePressed(toggleButtonPage3); btn3_03.parent(myCanvas);
+  btn3_04 = createButton('40대'); btn3_04.position(212,341); btn3_04.size(129,39); btn3_04.mousePressed(toggleButtonPage3); btn3_04.parent(myCanvas);
+  btn3_05 = createButton('50대 이상'); btn3_05.position(61,398); btn3_05.size(129,39); btn3_05.mousePressed(toggleButtonPage3); btn3_05.parent(myCanvas);
 
   // 처음 시작할 때는 1페이지이므로, 2페이지 버튼들은 일단 숨기기
   updateButtonVisibility();
